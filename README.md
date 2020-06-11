@@ -24,24 +24,24 @@ has_many :messeges
 ## messages
 |Column|Type|Options|
 |------|----|-------|
-|content|string|null: false
-|image|string|null: false
-|user_id|string|null: false
-|groups|string|null: false
+|content|text|
+|image|text|
+|user_id|integer|null: false, foreign_key: true
+|group_id|integer|null: false, foreign_key: true
 
 ### Association
-belongs_to:groups
-belongs_to:users
+belongs_to:group
+belongs_to:user
 
 ## users_groups
 |Column|Type|Options|
 |------|----|-------|
-|users_id|integer|null: false
-|groups_id|integer|null: false
+|user_id|integer|null: false, foreign_key: true
+|group_id|integer|null: false, foreign_key: true
 
 ### Association
-belongs_to:users
-belongs_to:groups
+belongs_to:user
+belongs_to:group
 
 
 
