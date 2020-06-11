@@ -2,51 +2,49 @@
 ## users
 |Column|Type|Options|
 |------|----|-------|
-|name|string|NOT NULL
-|email|string|NOT NULL unique: true
-|password|string|NOT NULL unique: true
+|name|string|null: false
+|email|string|null: false
+|password|string|null: false
 
 ### Association
-bilongs_to:groups
-bilongs_to:messages
+has_many :users_groups
+has_many :groupss, through: :users_groups
+has_many :messeges
 
 ## groups
 |Column|Type|Options|
 |------|----|-------|
-|name|string||
+|name|string|null: false
+
 ### Association
-belongs_to:users
-belongs_to:messseges
+has_many :users_groups
+has_many :users, through: :users_groups
+has_many :messeges
 
 ## messages
 |Column|Type|Options|
 |------|----|-------|
-|messeges|string|
-|image|string|
-|||
+|content|string|null: false
+|image|string|null: false
+|user_id|string|null: false
+|groups|string|null: false
 
 ### Association
-belongs_to:
+belongs_to:groups
+belongs_to:users
 
 ## users_groups
 |Column|Type|Options|
 |------|----|-------|
-|users|string|
-|groups|string|
+|users_id|integer|null: false
+|groups_id|integer|null: false
 
 ### Association
-has_many :user
-has_many :user
+belongs_to:users
+belongs_to:groups
 
-## users
-|Column|Type|Options|
-|------|----|-------|
-|name|string|
-|email|string|
 
-### Association
-has_many
-has_many
+
 
 
 This README would normally document whatever steps are necessary to get the
