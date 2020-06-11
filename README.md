@@ -2,51 +2,49 @@
 ## users
 |Column|Type|Options|
 |------|----|-------|
-|name|string|NOT NULL
-|email|string|NOT NULL unique: true
-|password|string|NOT NULL unique: true
+|name|string|null: false
+|email|string|null: false
+|password|string|null: false
 
 ### Association
-bilongs_to:groups
-bilongs_to:messages
+has_many :users_groups
+has_many :groupss, through: :users_groups
+has_many :messeges
 
 ## groups
 |Column|Type|Options|
 |------|----|-------|
-|name|string||
+|name|string|null: false
+
 ### Association
-belongs_to:users
-belongs_to:messseges
+has_many :users_groups
+has_many :users, through: :users_groups
+has_many :messeges
 
 ## messages
 |Column|Type|Options|
 |------|----|-------|
-|messeges|string|
-|image|string|
-|||
+|content|text|
+|image|text|
+|user_id|integer|null: false, foreign_key: true
+|group_id|integer|null: false, foreign_key: true
 
 ### Association
-belongs_to:
+belongs_to:group
+belongs_to:user
 
 ## users_groups
 |Column|Type|Options|
 |------|----|-------|
-|users|string|
-|groups|string|
+|user_id|integer|null: false, foreign_key: true
+|group_id|integer|null: false, foreign_key: true
 
 ### Association
-has_many :user
-has_many :user
+belongs_to:user
+belongs_to:group
 
-## users
-|Column|Type|Options|
-|------|----|-------|
-|name|string|
-|email|string|
 
-### Association
-has_many
-has_many
+
 
 
 This README would normally document whatever steps are necessary to get the
