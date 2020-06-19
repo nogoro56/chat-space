@@ -1,0 +1,33 @@
+.mainchat
+  .mainchat__name 
+    .mainchatgroup 
+      test
+      .mainchatmember 
+        member : masa
+    .editbottan
+      = link_to "#" do
+        = "Edit"
+  .mainchat__chat
+    .chat1
+      .chatname1
+        masa
+      .date1
+        2019/8/15(wed) 12:59:59
+    .chatmessege1
+      おはよう
+
+    .chat2
+      .chatname2
+        masa
+      .date2
+        2019/8/15(wed) 12:59:59
+    .chatmessege2
+      今日は雨から夜
+  .mainchat__text
+    %form.new-messege
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a messege"}
+        %label{class: "input-box__image"}
+          =icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", value: "send", class: "submit-btn"}
