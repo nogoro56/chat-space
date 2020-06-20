@@ -1,14 +1,16 @@
 .sidebar
- .sidebar__name
-  .user 
-   .user__name masa
-  .option
-   .option__edit
-    = icon('far', 'edit')
-   .option__cog
-    = icon('fas', 'cog')
+  .sidebar__name
+    .user 
+      .user__name 
+        = current_user.name
+    .option
+      .option__edit
+        = icon('far', 'edit')
+      .option__cog
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'cog')
 
- .group
-  .group__list
-   .groupname techcamp
-   .coment まだメッセージがありません
+  .group
+    .group__list
+      .groupname techcamp
+      .coment まだメッセージがありません
