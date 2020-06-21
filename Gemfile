@@ -50,6 +50,8 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'pry-rails'
+
 gem 'devise'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -41,15 +41,15 @@
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding: 0 20px;
-      &__list{
+      .Group{
         box-sizing: border-box;
         padding: 20px 0 40px 0;
-        .groupname{
+        &__name{
           font-size: 15px;
           margin: 0 0 5px 0;
           color: #fafafa;
         }
-        .coment{
+        &__messege{
           font-size: 11px;
           color: #fafafa;
         }
