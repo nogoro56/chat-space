@@ -66,11 +66,11 @@
       display: flex;
       justify-content: space-between;
       padding: 0 40px;
-       .mainchatgroup{
+       .groupname{
          font-size: 20px;
          color: #333333;
          margin-top: 35px;
-         .mainchatmember{
+         .groupuser{
           font-size: 12px;
           margin-top: 15px;
           color: #999999;
@@ -90,6 +90,7 @@
        }
     }
     &__chat{
+      overflow: scroll;
       height: calc(100vh - 190px);
       width: calc(100vw - 300px);
       background-color: #fafafa;
@@ -135,43 +136,43 @@
       background-color: #d2d2d2;
       padding: 20px 40px;
 
-        .new-messege{
+      .Form{
           display: flex;
 
-         .input-box{
-           width: 100%;
-           height: 50px;
-           display: flex;
-           position: relative;
+        .Form__contents{
+          width: 100%;
+          height: 50px;
+          display: flex;
+          position: relative;
 
-             &__text{
-              height: 50px;
-              width: 100%;
-              border-style: none;
-              padding: 0 40px 0 10px;
-             }
+            .Form__inputContent{
+            height: 50px;
+            width: 100%;
+            border-style: none;
+            padding: 0 40px 0 10px;
+            }
 
-             &__image{
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              font-size: 1.3rem;
-              cursor: pointer;
+            .Form__inputImage{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.3rem;
+            cursor: pointer;
 
-               &__file{
-                 display: none;
-               }
-             }
+              .Hidden{
+                display: none;
+              }
+            }
          }
-         .submit-btn{
-           width: 100px;
-           height: 50px;
-           border: none;
-           background-color: #38aef0;
-           padding: 0 30px;
-           margin-left: 15px;
-           color: #fafafa;
-         }
-       }
+        .Form__submit{
+          width: 100px;
+          height: 50px;
+          border: none;
+          background-color: #38aef0;
+          padding: 0 30px;
+          margin-left: 15px;
+          color: #fafafa;
+        }
+      }
     }
-}
+  }
