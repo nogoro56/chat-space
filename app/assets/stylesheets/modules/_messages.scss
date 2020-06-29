@@ -95,14 +95,14 @@
       width: calc(100vw - 300px);
       background-color: #fafafa;
       padding: 0 0 0 40px;
-       .chat1{
+       .MessageInfo{
          display: flex;
          padding: 35px 0 12px 0;
-          .chatname1{
+          .MessageInfo__userName{
             color: #333333;
             font-size: 16px;
           }
-          .date1{
+          .MessageInfo__date{
             color: #999999;
             font-size: 12px;
           }
@@ -111,25 +111,8 @@
         color: #434a54;
         font-size: 14px;
        }
-
-       .chat2{
-         display: flex;
-         padding: 46px 0 0 0;
-         .chatname2{
-          color: #333333;
-          font-size: 16px;
-         }
-         .date2{
-          color: #999999;
-          font-size: 12px;
-        }
-       }
-       .chatmessege2{
-        color: #434a54;
-        font-size: 14px;
-       }
-
     }
+
     &__text{
       height: 90px;
       width: calc(100vw - 300px);
